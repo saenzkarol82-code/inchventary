@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCC | Registrar Equipo</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Estilos Internos -->
+    <style>
+        :root {
+            --azul-oscuro: #0F4C81;
+            --azul-header: #0D47A1;
+            --azul-principal: #1E88E5;
+            --azul-claro: #64B5F6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--azul-oscuro), var(--azul-principal), var(--azul-claro));
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 15px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .main-container {
+            width: 100%;
+            max-width: 1100px;
+        }
+
+        /* Tarjeta Principal */
+        .card-system {
+            border: none;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+            background: #FFFFFF;
+        }
+
+        /* Cabecera de la Tarjeta */
+        .card-header-system {
+            background: var(--azul-header);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .logo-system {
+            font-size: 50px;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+        }
+
+        /* Secciones Internas / Dashboard Cards */
+        .dashboard-card {
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-radius: 18px;
+            transition: all 0.35s ease;
+            background: #FFFFFF;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, .05);
+            height: 100%;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(15, 76, 129, .15);
+        }
+
+        .section-title {
+            color: var(--azul-oscuro);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icono {
+            font-size: 1.6rem;
+            color: var(--azul-principal);
+        }
+
+        /* Campos de Formulario */
+        .form-label {
+            font-weight: 600;
+            color: #495057;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        .form-control,
+        .form-select {
+            height: 48px;
+            border-radius: 10px;
+            border: 1px solid #ced4da;
+            padding: 0.375rem 0.75rem;
+        }
+
+        textarea.form-control {
+            height: auto;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--azul-principal);
+            box-shadow: 0 0 10px rgba(30, 136, 229, .3);
+        }
+
+        /* Botones */
+        .btn-system {
+            height: 50px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 0 25px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary-system {
+            background-color: var(--azul-principal);
+            border: none;
+            color: white;
+        }
+
+        .btn-primary-system:hover {
+            background-color: var(--azul-oscuro);
+            color: white;
+        }
+
+        /* Footer */
+        .card-footer-system {
+            background: #F8F9FA;
+            border-top: 1px solid #E9ECEF;
+            text-align: center;
+            padding: 25px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <!-- Contenedor Estilo Card System -->
+        <div class="card card-system">
+
+            <!-- Cabecera Principal -->
+            <div class="card-header-system">
+                <i class="bi bi-laptop logo-system"></i>
+                <h2 class="fw-bold mb-1">Registro de Equipos</h2>
+                <h5 class="text-light opacity-75 mb-1">Mercado DCC</h5>
+                <p class="small mb-0 opacity-75">Registro inicial de activos tecnológicos.</p>
+            </div>
+
+            <!-- Cuerpo del Formulario -->
+            <div class="card-body p-4 p-md-5">
+
+                <!-- FILA 1 -->
+                <div class="row g-4 mb-4">
+
+                    <!-- Identificación -->
+                    <div class="col-lg-6">
+                        <div class="card dashboard-card">
+                            <div class="card-body p-4">
+                                <h4 class="section-title mb-4">
+                                    <i class="bi bi-upc-scan icono"></i>
+                                    Identificación
+                                </h4>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Serial</label>
+                                    <input type="text" class="form-control" value="ABC123XYZ456">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Placa Inventario</label>
+                                    <input type="text" class="form-control" value="INV001">
+                                </div>
+
+                                <div>
+                                    <label class="form-label">Nombre Equipo</label>
+                                    <input type="text" class="form-control" value="CO-DCC-LT-001">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Información Técnica -->
+                    <div class="col-lg-6">
+                        <div class="card dashboard-card">
+                            <div class="card-body p-4">
+                                <h4 class="section-title mb-4">
+                                    <i class="bi bi-cpu-fill icono"></i>
+                                    Información Técnica
+                                </h4>
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Tipo Equipo</label>
+                                        <input type="text" class="form-control" value="Laptop">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Marca</label>
+                                        <input type="text" class="form-control" value="Dell">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Modelo</label>
+                                        <input type="text" class="form-control" value="Latitude 5440">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Procesador</label>
+                                        <input type="text" class="form-control" value="Intel Core i5">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">RAM</label>
+                                        <input type="text" class="form-control" value="16 GB">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Disco</label>
+                                        <input type="text" class="form-control" value="512 SSD">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FILA 2 -->
+                <div class="row g-4 mb-4">
+
+                    <!-- Ubicación -->
+                    <div class="col-lg-6">
+                        <div class="card dashboard-card">
+                            <div class="card-body p-4">
+                                <h4 class="section-title mb-4">
+                                    <i class="bi bi-geo-alt-fill icono"></i>
+                                    Ubicación
+                                </h4>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Región</label>
+                                    <input type="text" class="form-control" value="Colombia">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Mercado</label>
+                                    <input type="text" class="form-control" value="DCC">
+                                </div>
+
+                                <div>
+                                    <label class="form-label">Ciudad</label>
+                                    <input type="text" class="form-control" value="Bogotá">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compra y Garantía -->
+                    <div class="col-lg-6">
+                        <div class="card dashboard-card">
+                            <div class="card-body p-4">
+                                <h4 class="section-title mb-4">
+                                    <i class="bi bi-shield-check icono"></i>
+                                    Compra y Garantía
+                                </h4>
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Proveedor</label>
+                                        <input type="text" class="form-control" value="Dell Colombia">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Factura</label>
+                                        <input type="text" class="form-control" value="FAC-2026-001">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Fecha Compra</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label class="form-label">Fecha Fin Garantía</label>
+                                        <input type="date" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- FILA 3 -->
+                <div class="row g-4">
+
+                    <!-- Accesorios -->
+                    <div class="col-lg-6">
+                        <div class="card dashboard-card">
+                            <div class="card-body p-4">
+                                <h4 class="section-title mb-4">
+                                    <i class="bi bi-box-seam-fill icono"></i>
+                                    Accesorios
+                                </h4>
+
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="cargador" checked>
+                                            <label class="form-check-label" for="cargador">Cargador</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="mouse" checked>
+                                            <label class="form-check-label" for="mouse">Mouse</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="maletin" checked>
+                                            <label class="form-check-label" for="maletin">Maletín</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-check mb-2">
+                                            <input class="form-check-input" type="checkbox" id="docking">
+                                            <label class="form-check-label" for="docking">Docking</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estado del Equipo -->
+                    <div class="col-lg-6">
+                        <div class="card dashboard-card">
+                            <div class="card-body p-4">
+                                <h4 class="section-title mb-4">
+                                    <i class="bi bi-clipboard-check-fill icono"></i>
+                                    Estado del Equipo
+                                </h4>
+
+                                <div class="mb-3">
+                                    <label class="form-label">Estado</label>
+                                    <select class="form-select">
+                                        <option selected>Disponible</option>
+                                        <option>Asignado</option>
+                                        <option>Mantenimiento</option>
+                                        <option>Pendiente Revisión</option>
+                                        <option>Baja</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label class="form-label">Observaciones</label>
+                                    <textarea class="form-control" rows="3">Equipo nuevo recibido desde laboratorio con accesorios completos.</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Footer / Botones -->
+            <div class="card-footer-system">
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                    <button type="submit" class="btn btn-system btn-primary-system">
+                        <i class="bi bi-save-fill"></i> Guardar Equipo
+                    </button>
+
+                    <button type="reset" class="btn btn-system btn-secondary">
+                        <i class="bi bi-eraser-fill"></i> Limpiar
+                    </button>
+
+                    <a href="/dashboard/dashboard.html" class="btn btn-system btn-outline-secondary">
+                        <i class="bi bi-arrow-left"></i> Volver
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
