@@ -14,10 +14,15 @@
     <!-- Estilos Internos -->
     <style>
         :root {
-            --azul-oscuro: #0F4C81;
-            --azul-header: #0D47A1;
-            --azul-principal: #1E88E5;
-            --azul-claro: #64B5F6;
+        --azul-principal: #0F172A;   /* Azul slate muy profundo (elegante y sobrio) */
+        --azul-acento: #2563EB;      /* Azul cobalto para focos e interacciones */
+        --azul-hover: #1D4ED8;       /* Azul acento al interactuar */
+        --fondo-sitio: #F8FAFC;      /* Gris frío tenue para reemplazar el degradado brillante */
+        --fondo-tarjeta: #FFFFFF;
+        --texto-principal: #0F172A;  /* Gris oscuro mate en lugar de negro puro */
+        --texto-secundario: #64748B;
+        --borde-suave: #E2E8F0;
+        --sombra-elegante: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
         }
 
         * {
@@ -53,7 +58,7 @@
         /* Cabecera de la Tarjeta */
         .card-header-system {
             background: var(--azul-header);
-            color: white;
+            color: var(--azul-header);
             text-align: center;
             padding: 30px 20px;
         }
@@ -96,7 +101,7 @@
         }
 
         .dashboard-card p {
-            color: #6c757d;
+            color: #2f5372;
             font-size: 0.95rem;
             margin-bottom: 20px;
         }
