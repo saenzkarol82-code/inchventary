@@ -1,0 +1,5 @@
+# Dependencias básicas para proyecto Python
+# Reemplaza o agrega según tu proyecto
+Flask==3.0.3
+gunicorn==23.0.0
+requests==2.32.3
